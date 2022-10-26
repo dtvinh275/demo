@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <HeaderBar />
+    <div class="main-section columns">
+      <main class="column">
+        <MachineCard />
+      </main>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderBar from '@/components/header-bar';
+import MachineCard from '@/components/MachineCard';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components: { HeaderBar, MachineCard },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import '@/design/index.scss';
 </style>
